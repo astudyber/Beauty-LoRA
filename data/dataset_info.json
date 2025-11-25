@@ -1,0 +1,10 @@
+{
+    "AesDataset": {
+        "file_name": "gt.json",
+        "formatting": "sharegpt",
+        "columns": {
+            "messages": "conversations",
+            "images": "images"
+        }
+    }
+}
