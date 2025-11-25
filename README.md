@@ -61,7 +61,7 @@ pip install -r LoRA/requirements.txt
 
 * main code:
 
-```
+```python
 # 微调格式数据集
     dataset = []
     type = ['AesP', 'AesE', 'AesA1']
