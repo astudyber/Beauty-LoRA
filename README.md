@@ -95,9 +95,25 @@ pip install -r LoRA/requirements.txt
 
 ##  :white_check_mark: How to Run
 
-```python
+* Model training
+
+```bash
 bash train.sh
 ```
+
+* Merge the fine-tuning module with the base module
+
+```bash
+bash lead_out_model.sh
+```
+
+* Perform reasoning
+
+```python
+python run.py
+```
+
+
 
 
 
