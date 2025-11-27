@@ -20,9 +20,7 @@ This is the official repository for **Beauty-LoRA**.
 
 ## :bulb: LoRA for Qwen3-VL-8B
 
-* **Inverse ISP**: Can be 
-
-
+* Schematic diagram of the model framework
 
 ![LoRA for Qwen3](img/model.png)
 
@@ -115,7 +113,7 @@ python run.py
 
 
 
-
+* Note: **The batch size is set to 2; Save the model every 30 rounds**
 
 
 
