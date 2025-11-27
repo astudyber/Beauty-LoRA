@@ -1,0 +1,2 @@
+基底模型下载地址：https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct
+您只需要使用在线训练集，训练一轮（得到多个CheckPoint模型），即可获取较高性能的美学多模态大模型（Beauty-LoRA）
