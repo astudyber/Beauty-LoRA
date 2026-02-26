@@ -2,4 +2,5 @@
 dataset/
 
 # 2. 忽略基底模型
-Qwen3-VL-2B/
+Model/
+
