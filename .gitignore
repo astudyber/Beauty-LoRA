@@ -4,3 +4,5 @@ dataset/
 # 2. 忽略基底模型
 Model/
 
+# 3. 忽略环境和缓存
+.vscode/
