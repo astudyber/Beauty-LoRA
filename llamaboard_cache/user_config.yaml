@@ -1,0 +1,6 @@
+cache_dir: null
+hub_name: huggingface
+lang: zh
+last_model: Qwen3-VL-2B-Instruct
+path_dict:
+  Qwen3-VL-2B-Instruct: Model\Qwen3-VL-2B

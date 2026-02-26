@@ -30,6 +30,8 @@ cd ..
 # https://github.com/jllllll/bitsandbytes-windows-webui/releases/tag/wheels
 pip install E:\VLP\第一届人工智能创新大赛（校赛）\Ours(参赛)\Beauty-LoRA\Model\bitsandbytes\bitsandbytes-0.41.1-py3-none-win_amd64.whl
     
+pip install -U bitsandbytes>=0.46.1
+    
 # 安装 Flash Attention-2
 # https://huggingface.co/lldacing/flash-attention-windows-wheel/tree/main
 pip install ./Model/Flash-Attention/flash_attn-2.7.4%2Bcu124torch2.5.1cxx11abiFALSE-cp310-cp310-win_amd64.whl
@@ -41,7 +43,7 @@ pip install ./Model/Flash-Attention/flash_attn-2.7.4%2Bcu124torch2.5.1cxx11abiFA
 
 
 
-## 初步运行
+## 初步运行  +  本地微调 Qwen3-VL-2B
 
 ```
 set CUDA_VISIBLE_DEVICES=0 && set GRADIO_SHARE=1 && set GRADIO_SERVER_PORT=6678
