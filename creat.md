@@ -2,6 +2,8 @@
 
 
 
+# 1. 环境
+
 ## 创建.gitignore文件
 
 作用：github仓库上传时，忽略模型文件、数据集文件、缓存文件
@@ -50,6 +52,148 @@ set CUDA_VISIBLE_DEVICES=0 && set GRADIO_SHARE=1 && set GRADIO_SERVER_PORT=6678
 
 llamafactory-cli webui
 ```
+
+
+
+## 进入训练微调
+
+```python
+# 训练参数保存路径
+llamaboard_config/2026-02-26-16-38-15.yaml
+
+# 模型微调的AB矩阵保存路径
+saves/Qwen3-VL-2B-Instruct/lora/输出目录名
+
+# 模型合并命令（windows）
+llamafactory-cli export ^
+  --model_name_or_path E:/VLP/Ours/Ours/Beauty-LoRA/Model/Qwen3-VL-2B ^
+  --adapter_name_or_path E:/VLP/Ours/Ours/Beauty-LoRA/saves/Qwen3-VL-2B-Instruct/lora/LoRA_Origin/checkpoint-40 ^
+  --template qwen ^
+  --finetuning_type lora ^
+  --export_dir ./Model/LoRA_Origin ^
+  --export_size 5 ^
+  --export_device cpu
+
+# 模型合并命令（windows）
+llamafactory-cli export \
+  --model_name_or_path E:/VLP/Ours/Ours/Beauty-LoRA/Model/Qwen3-VL-2B \
+  --adapter_name_or_path E:/VLP/Ours/Ours/Beauty-LoRA/saves/Qwen3-VL-2B-Instruct/lora/LoRA_Origin/checkpoint-40 \
+  --template qwen \
+  --finetuning_type lora \
+  --export_dir /Model/LoRA_Origin \
+  --export_size 5 \
+  --export_device cpu
+
+```
+
+
+
+
+
+# 2. 数据集增强
+
+实例效果对比
+
+### 原句
+
+```python
+'The content of the picture is vivid and aesthetically pleasing.'
+图片的内容生动形象，富有美感。
+```
+
+### A. 同义词替换
+
+```python
+'The content of the picture is vivid and esthetically please.'
+图片的内容生动美观，请欣赏。
+```
+
+* **分析**：将 "aesthetically" 换成了美式拼写 "esthetically"，但将 "pleasing" 误写成了 "please"。
+* **模拟真实噪声**：在实际应用中，用户的输入往往是不完美的，这一项模拟了同义替换和轻微语法错误。
+
+###  B. BERT 上下文替换
+
+```python
+'The content and every picture were physically and aesthetically pleasing.'
+内容和每张照片令人身心愉悦。
+```
+
+* **分析**：把一张图的内容”改成了“内容和每一张图”，并加入了“physically”（物理上的）。 在多模态任务中，容易产生幻觉。 
+
+### C. 词向量替换
+
+```python
+'The combining of the portrait is vivid from unappealing pleasing.'
+这幅图像描绘的内容既生动又令人乏味的愉快。
+```
+
+* **分析**： 逻辑混乱。“unappealing pleasing”属于矛盾修饰 
+
+### D. BERT 随机插入
+
+```python
+'The original content form of all the picture frames is vivid and aesthetically pleasing.'
+所有图像的原始内容形式都生动美观。
+```
+
+* **分析**：保留核心谓语和宾语， 对主语进行了修饰和扩充（添加了 original, form, frames），让模型学会即使句子变长、变复杂，核心含义依然不变。 
+* **泛化能力**：非常适合训练多模态模型处理不同风格的描述。
+
+### E. 其他方式
+
+```python
+# 键盘输入错误模拟
+'The f*n%ent of the pictKdF is vivid and sestYetisal>y pleaWiJn.'
+图片KdF的f*n%ent是生动的，并且是完整的。
+
+# 随机词删除
+'The content of vivid and aesthetically.'
+内容生动美观。
+```
+
+* **分析**：过度噪声          信息严重丢失（丢失主语信息“图像”，缺乏定语修饰）
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 3. 模型结构优化
+
+
+
+
+
+
+
+
+
+
+
+# 4. 模型推理优化
+
+
+
+
+
+
+
+
+
+# 5. 模型测评
+
+
+
+
+
+
 
 
 

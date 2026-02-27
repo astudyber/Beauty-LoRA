@@ -2,7 +2,12 @@
 dataset/
 
 # 2. 忽略基底模型
-Model/
+Model/bert-base-uncased/*
+Model/bitsandbytes/*
+Model/Flash-Attention/*
+Model/Glove/*
+Model/LoRA_Origin/*
+Model/Qwen3-VL-2B/*
 
 # 3. 忽略环境和缓存
 .vscode/
