@@ -3,11 +3,17 @@ dataset/
 
 # 2. 忽略基底模型
 Model/bert-base-uncased/*
+!Model/bert-base-uncased/.gitkeep
 Model/bitsandbytes/*
+!Model/bitsandbytes/.gitkeep
 Model/Flash-Attention/*
+!Model/Flash-Attention/.gitkeep
 Model/Glove/*
+!Model/Glove/.gitkeep
 Model/LoRA_Origin/*
+!Model/LoRA_Origin/.gitkeep
 Model/Qwen3-VL-2B/*
+!Model/Qwen3-VL-2B/.gitkeep
 
 # 3. 忽略环境和缓存
 .vscode/
