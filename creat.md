@@ -160,21 +160,84 @@ llamafactory-cli export \
 ### 3.1 确定 Qwen3-VL 的网络结构
 
 ```python
-from transformers import AutoModelForVision2Seq
-
-# 替换为你具体的模型路径
-model_id = "Qwen/Qwen2-VL-2B-Instruct" 
-model = AutoModelForVision2Seq.from_pretrained(model_id, trust_remote_code=True)
-
-# 打印所有模块名称
-for name, module in model.named_modules():
-    print(name)
+# 总结如下
+Qwen3-VL-2B:{
+    visual:{
+        'patch_embed': Conv3d [1024, 2, 3, 16, 16]
+        'pos_embed': Embedding [2304, 1024]
+        'rotary_pos_emb': Qwen3VLVisionRotaryEmbedding
+        'blocks': 23 × {
+            norm1: LayerNorm  [1024]
+            norm2: LayerNorm  [1024]
+            attn: {
+                qkv: Linear [3072, 1024]
+                proj: Linear [1024, 1024]
+            }
+            mlp: {
+                linear_fc1: Linear [4096, 1024]
+                linear_fc2: Linear [1024, 4096]
+                act_fn: GELUTanh
+            }
+        }
+        'merger': {
+            norm: LayerNorm  [1024]
+            linear_fc1:  Linear [4096, 4096]
+            act_fn: GELU
+            linear_fc2:  Linear [2048, 4096]
+        }
+        'deepstack_merger_list': 3 × {
+            norm: LayerNorm  [4096]
+            linear_fc1:  Linear [4096, 4096]
+            act_fn: GELU
+            linear_fc2:  Linear [2048, 4096]
+        }
+    }
+    
+    
+    language_model:{
+        'embed_tokens': Embedding [151936, 2048]
+        'layers': 27 × {
+            self_attn: {
+                q_proj:  Linear [2048, 2048]
+                k_proj:  Linear [1024, 2048]
+                v_proj:  Linear [1024, 2048]
+                o_proj:  Linear [2048, 2048]
+                q_norm:  Qwen3VLTextRMSNorm [128]
+                k_norm:  Qwen3VLTextRMSNorm [128]
+            }
+            mlp: {
+                gate_proj:  Linear [6144, 2048]
+                up_proj  :  Linear [6144, 2048]
+                down_proj:  Linear [2048, 6144]
+                act_fn   :  SiLUActivation
+            }
+            input_layernorm: Qwen3VLTextRMSNorm [2048]
+            post_attention_layernorm: Qwen3VLTextRMSNorm [2048]
+        }
+        'norm': Qwen3VLTextRMSNorm [2048]
+        'rotary_emb': Qwen3VLTextRotaryEmbedding
+    }
+}
 ```
 
-**最推荐的操作**是将参数设置为：
---lora_target all
+* 默认的 LoRA 微调的低秩矩阵具体添加在：
+  * 语言模块 language_model中的所有线性层，包括下面的线性层
+  * `q_proj`、`k_proj`、`v_proj`、`o_proj`
+  * `gate_proj`、`up_proj`、`down_proj`
 
-这将把 LoRA 的矩阵 A/B 附加到 Qwen 模型所有的 q,k,v,o,gate,up,down 投影层上，通常能获得最佳的微调效果。
+### 3.2 改进 LoRA （视觉 visual）
+
+
+
+
+
+
+
+### 3.3 采用 MOE 多型复合矩阵（语言 language）
+
+
+
+
 
 
 
