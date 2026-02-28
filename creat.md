@@ -193,7 +193,7 @@ Qwen3-VL-2B:{
         }
     }
     
-    
+    language_model.layers.*.self_attn.q_proj
     language_model:{
         'embed_tokens': Embedding [151936, 2048]
         'layers': 27 × {
@@ -227,9 +227,15 @@ Qwen3-VL-2B:{
 
 ### 3.2 改进 LoRA （视觉 visual）
 
+* 解冻视觉编码器
+* 为如下网络层添加低秩矩阵（主要是基础视觉模块）：
+  * `visual.blocks.*.attn.qkv`
+  * `visual.blocks.*.attn.proj`
+  * `visual.blocks.*.mlp.linear_fc1`
+  * `visual.blocks.*.mlp.linear_fc2`
 
-
-
+* 简洁写法：
+  * `qkv`、`proj`、`linear_fc1`、`linear_fc2`
 
 
 
