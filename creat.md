@@ -92,7 +92,9 @@ llamafactory-cli export \
 
 # 2. 数据集增强
 
-实例效果对比
+注：实例效果对比，由于每一次文本增强的结果具有随机性，此处采用典型案例进行说明
+
+数据量增长220%：原数据集包含   8400  个QA对；数据增强后为  26880  个QA对
 
 ### 原句
 
@@ -101,35 +103,7 @@ llamafactory-cli export \
 图片的内容生动形象，富有美感。
 ```
 
-### A. 同义词替换
-
-```python
-'The content of the picture is vivid and esthetically please.'
-图片的内容生动美观，请欣赏。
-```
-
-* **分析**：将 "aesthetically" 换成了美式拼写 "esthetically"，但将 "pleasing" 误写成了 "please"。
-* **模拟真实噪声**：在实际应用中，用户的输入往往是不完美的，这一项模拟了同义替换和轻微语法错误。
-
-###  B. BERT 上下文替换
-
-```python
-'The content and every picture were physically and aesthetically pleasing.'
-内容和每张照片令人身心愉悦。
-```
-
-* **分析**：把一张图的内容”改成了“内容和每一张图”，并加入了“physically”（物理上的）。 在多模态任务中，容易产生幻觉。 
-
-### C. 词向量替换
-
-```python
-'The combining of the portrait is vivid from unappealing pleasing.'
-这幅图像描绘的内容既生动又令人乏味的愉快。
-```
-
-* **分析**： 逻辑混乱。“unappealing pleasing”属于矛盾修饰 
-
-### D. BERT 随机插入
+### A. BERT 随机插入（100%）
 
 ```python
 'The original content form of all the picture frames is vivid and aesthetically pleasing.'
@@ -139,9 +113,32 @@ llamafactory-cli export \
 * **分析**：保留核心谓语和宾语， 对主语进行了修饰和扩充（添加了 original, form, frames），让模型学会即使句子变长、变复杂，核心含义依然不变。 
 * **泛化能力**：非常适合训练多模态模型处理不同风格的描述。
 
-### E. 其他方式
+### B. 同义词替换（100%）
 
 ```python
+'The content of the picture is vivid and esthetically please.'
+图片的内容生动美观，请欣赏。
+```
+
+* **分析**：将 "aesthetically" 换成了美式拼写 "esthetically"，但将 "pleasing" 误写成了 "please"。
+* **模拟真实噪声**：在实际应用中，用户的输入往往是不完美的，这一项模拟了同义替换和轻微语法错误。
+
+###  C. BERT 上下文替换（20%）
+
+```python
+'The content and every picture were physically and aesthetically pleasing.'
+内容和每张照片令人身心愉悦。
+```
+
+* **分析**：把一张图的内容”改成了“内容和每一张图”，并加入了“physically”（物理上的）。 在多模态任务中，可能增加泛化性，但也可能带来幻觉。 
+
+### D. 其他方式（0%）
+
+```python
+# 词向量替换
+'The combining of the portrait is vivid from unappealing pleasing.'
+这幅图像描绘的内容既生动又令人乏味的愉快。
+
 # 键盘输入错误模拟
 'The f*n%ent of the pictKdF is vivid and sestYetisal>y pleaWiJn.'
 图片KdF的f*n%ent是生动的，并且是完整的。
@@ -151,23 +148,33 @@ llamafactory-cli export \
 内容生动美观。
 ```
 
-* **分析**：过度噪声          信息严重丢失（丢失主语信息“图像”，缺乏定语修饰）
+* **分析**：逻辑混乱。“unappealing pleasing”属于矛盾修饰 
 
-
-
-
-
-
-
-
-
-
+* **分析**：过度噪声。 这种数据毫无意义，只会降低模型对正常语言的理解。 
+* **分析**：信息严重丢失（丢失主语信息“图像”，缺乏定语修饰）
 
 
 
 # 3. 模型结构优化
 
+### 3.1 确定 Qwen3-VL 的网络结构
 
+```python
+from transformers import AutoModelForVision2Seq
+
+# 替换为你具体的模型路径
+model_id = "Qwen/Qwen2-VL-2B-Instruct" 
+model = AutoModelForVision2Seq.from_pretrained(model_id, trust_remote_code=True)
+
+# 打印所有模块名称
+for name, module in model.named_modules():
+    print(name)
+```
+
+**最推荐的操作**是将参数设置为：
+--lora_target all
+
+这将把 LoRA 的矩阵 A/B 附加到 Qwen 模型所有的 q,k,v,o,gate,up,down 投影层上，通常能获得最佳的微调效果。
 
 
 

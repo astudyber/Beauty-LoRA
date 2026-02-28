@@ -1,0 +1,3788 @@
+{
+    "visual": {
+        "_type": "Qwen3VLVisionModel",
+        "patch_embed": {
+            "_type": "Qwen3VLVisionPatchEmbed",
+            "proj": {
+                "_type": "Conv3d",
+                "_shape": [
+                    1024,
+                    3,
+                    2,
+                    16,
+                    16
+                ]
+            }
+        },
+        "pos_embed": {
+            "_type": "Embedding",
+            "_shape": [
+                2304,
+                1024
+            ]
+        },
+        "rotary_pos_emb": {
+            "_type": "Qwen3VLVisionRotaryEmbedding"
+        },
+        "blocks": {
+            "_type": "ModuleList",
+            "0": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "1": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "2": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "3": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "4": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "5": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "6": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "7": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "8": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "9": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "10": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "11": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "12": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "13": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "14": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "15": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "16": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "17": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "18": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "19": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "20": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "21": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "22": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            },
+            "23": {
+                "_type": "Qwen3VLVisionBlock",
+                "norm1": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "norm2": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        1024
+                    ]
+                },
+                "attn": {
+                    "_type": "Qwen3VLVisionAttention",
+                    "qkv": {
+                        "_type": "Linear",
+                        "_shape": [
+                            3072,
+                            1024
+                        ]
+                    },
+                    "proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            1024
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLVisionMLP",
+                    "linear_fc1": {
+                        "_type": "Linear",
+                        "_shape": [
+                            4096,
+                            1024
+                        ]
+                    },
+                    "linear_fc2": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            4096
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "GELUTanh"
+                    }
+                }
+            }
+        },
+        "merger": {
+            "_type": "Qwen3VLVisionPatchMerger",
+            "norm": {
+                "_type": "LayerNorm",
+                "_shape": [
+                    1024
+                ]
+            },
+            "linear_fc1": {
+                "_type": "Linear",
+                "_shape": [
+                    4096,
+                    4096
+                ]
+            },
+            "act_fn": {
+                "_type": "GELU"
+            },
+            "linear_fc2": {
+                "_type": "Linear",
+                "_shape": [
+                    2048,
+                    4096
+                ]
+            }
+        },
+        "deepstack_merger_list": {
+            "_type": "ModuleList",
+            "0": {
+                "_type": "Qwen3VLVisionPatchMerger",
+                "norm": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        4096
+                    ]
+                },
+                "linear_fc1": {
+                    "_type": "Linear",
+                    "_shape": [
+                        4096,
+                        4096
+                    ]
+                },
+                "act_fn": {
+                    "_type": "GELU"
+                },
+                "linear_fc2": {
+                    "_type": "Linear",
+                    "_shape": [
+                        2048,
+                        4096
+                    ]
+                }
+            },
+            "1": {
+                "_type": "Qwen3VLVisionPatchMerger",
+                "norm": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        4096
+                    ]
+                },
+                "linear_fc1": {
+                    "_type": "Linear",
+                    "_shape": [
+                        4096,
+                        4096
+                    ]
+                },
+                "act_fn": {
+                    "_type": "GELU"
+                },
+                "linear_fc2": {
+                    "_type": "Linear",
+                    "_shape": [
+                        2048,
+                        4096
+                    ]
+                }
+            },
+            "2": {
+                "_type": "Qwen3VLVisionPatchMerger",
+                "norm": {
+                    "_type": "LayerNorm",
+                    "_shape": [
+                        4096
+                    ]
+                },
+                "linear_fc1": {
+                    "_type": "Linear",
+                    "_shape": [
+                        4096,
+                        4096
+                    ]
+                },
+                "act_fn": {
+                    "_type": "GELU"
+                },
+                "linear_fc2": {
+                    "_type": "Linear",
+                    "_shape": [
+                        2048,
+                        4096
+                    ]
+                }
+            }
+        }
+    },
+    "language_model": {
+        "_type": "Qwen3VLTextModel",
+        "embed_tokens": {
+            "_type": "Embedding",
+            "_shape": [
+                151936,
+                2048
+            ]
+        },
+        "layers": {
+            "_type": "ModuleList",
+            "0": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "1": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "2": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "3": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "4": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "5": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "6": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "7": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "8": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "9": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "10": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "11": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "12": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "13": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "14": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "15": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "16": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "17": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "18": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "19": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "20": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "21": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "22": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "23": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "24": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "25": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "26": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            },
+            "27": {
+                "_type": "Qwen3VLTextDecoderLayer",
+                "self_attn": {
+                    "_type": "Qwen3VLTextAttention",
+                    "q_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "k_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "v_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            1024,
+                            2048
+                        ]
+                    },
+                    "o_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            2048
+                        ]
+                    },
+                    "q_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    },
+                    "k_norm": {
+                        "_type": "Qwen3VLTextRMSNorm",
+                        "_shape": [
+                            128
+                        ]
+                    }
+                },
+                "mlp": {
+                    "_type": "Qwen3VLTextMLP",
+                    "gate_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "up_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            6144,
+                            2048
+                        ]
+                    },
+                    "down_proj": {
+                        "_type": "Linear",
+                        "_shape": [
+                            2048,
+                            6144
+                        ]
+                    },
+                    "act_fn": {
+                        "_type": "SiLUActivation"
+                    }
+                },
+                "input_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                },
+                "post_attention_layernorm": {
+                    "_type": "Qwen3VLTextRMSNorm",
+                    "_shape": [
+                        2048
+                    ]
+                }
+            }
+        },
+        "norm": {
+            "_type": "Qwen3VLTextRMSNorm",
+            "_shape": [
+                2048
+            ]
+        },
+        "rotary_emb": {
+            "_type": "Qwen3VLTextRotaryEmbedding"
+        }
+    }
+}
